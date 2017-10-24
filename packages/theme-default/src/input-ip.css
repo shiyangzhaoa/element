@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import "./input.css";
+@import "./common/var.css";
+
+@component-namespace el {
+  @b input-ip {
+    display: inline-block;
+    width: 180px;
+    position: relative;
+    line-height: normal;
+    font-family: monospace;
+    white-space: nowrap;
+    width: fit-content;
+    font-size: var(--font-size-base);
+    appearance: none;
+    background-color: var(--input-fill);
+    background-image: none;
+    border-radius: var(--input-border-radius);
+    border: var(--input-border);
+    box-sizing: border-box;
+    color: var(--input-color);
+    height: var(--input-height);
+    line-height: 1;
+    padding: 3px 10px;
+    transition: var(--border-transition-base);
+    vertical-align: top;
+
+    &:hover {
+      border-color: var(--input-hover-border);
+    }
+    
+    @e ip {
+      width: 3ch;
+      padding: 0;
+      outline: none;
+      border: none;
+      ime-mode: disabled;
+
+      &::placeholder {
+        color: var(--input-placeholder-color);
+      }
+
+      &:focus {
+        .el-input-ip {
+          outline: none;
+          border-color: var(--input-focus-border);
+        }
+      }
+    }
+
+    @when disabled {
+      & {
+        background-color: var(--input-disabled-fill);
+        border-color: var(--disabled-border-base);
+        color: var(--disabled-border-base);
+
+        &:hover {
+          color: var(--disabled-border-base);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

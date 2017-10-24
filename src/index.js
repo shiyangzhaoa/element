@@ -12,6 +12,7 @@ import MenuItem from '../packages/menu-item/index.js';
 import MenuItemGroup from '../packages/menu-item-group/index.js';
 import Input from '../packages/input/index.js';
 import InputNumber from '../packages/input-number/index.js';
+import InputIp from '../packages/input-ip/index.js';
 import Radio from '../packages/radio/index.js';
 import RadioGroup from '../packages/radio-group/index.js';
 import RadioButton from '../packages/radio-button/index.js';
@@ -80,6 +81,7 @@ const components = [
   MenuItemGroup,
   Input,
   InputNumber,
+  InputIp,
   Radio,
   RadioGroup,
   RadioButton,
@@ -176,6 +178,7 @@ module.exports = {
   MenuItemGroup,
   Input,
   InputNumber,
+  InputIp,
   Radio,
   RadioGroup,
   RadioButton,

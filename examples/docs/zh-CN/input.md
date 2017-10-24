@@ -190,7 +190,9 @@
 ::: demo
 ```html
 <el-input v-model="input" placeholder="请输入内容"></el-input>
-
+<el-input-ip v-model="input"></el-input-ip>
+<script>
+export default {
 <script>
 export default {
   data() {
