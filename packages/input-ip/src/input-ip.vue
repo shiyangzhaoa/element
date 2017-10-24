@@ -1,5 +1,7 @@
 <template>
-  <div class="el-input-ip" :class="[
+  <div :class="[
+      'el-input-ip',
+      'el-input__inner',
       {
         'is-disabled': disabled
       }
@@ -79,7 +81,6 @@ export default {
         const currentValue = +`${el.value.slice(0, el.selectionStart)}${evt.key}${el.value.slice(el.selectionEnd)}`;
         if (
           !/\d/.test(evt.key) ||
-          (el.value === '0' && el.selectionStart === 1) ||
           currentValue > 255
         ) {
           evt.preventDefault();
