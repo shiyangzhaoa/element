@@ -5,6 +5,8 @@
 @component-namespace el {
   @b input-ip {
     font-family: monospace;
+    white-space: nowrap;
+    width: fit-content;
 
     &:hover {
       border-color: var(--input-hover-border);
